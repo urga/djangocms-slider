@@ -1,0 +1,34 @@
+{% load sekizai_tags thumbnail %}
+<div class="flexslider headergallery">
+	<ul class="slides">
+	{% autoescape off %}
+	{% for image in instance.images.all %}
+		
+		<li>
+			<figure>
+				<a href="{{ image.url }}"><img src="{{ PUBLIC_URL }}{% thumbnail image.image 1170x500 upscale crop %}" alt="{{ image.name }}" /></a>
+			</figure>
+		</li>
+		
+	{% endfor %}
+	{% endautoescape %}
+	</ul>
+</div>
+
+{% addtoblock "css" %}
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.2/flexslider-min.css" />
+{% endaddtoblock %}
+
+{% addtoblock "js" %}
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.2/jquery.flexslider-min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.flexslider').flexslider({
+            animation: "slide"
+            ,pauseOnAction: false
+            ,pauseOnHover: true
+            ,controlNav: false
+        });
+    });
+</script>
+{% endaddtoblock %}
