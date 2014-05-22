@@ -1,4 +1,3 @@
-import pdb
 from django.contrib import admin
 from adminsortable.admin import SortableAdmin, SortableTabularInline
 
