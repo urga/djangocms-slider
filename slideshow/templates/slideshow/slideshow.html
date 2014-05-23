@@ -3,7 +3,6 @@
 	<ul class="slides">
 	{% autoescape off %}
 	{% for image in instance.images.all %}
-		
 		<li>
 			<figure>
 				{% if image.url %}
@@ -13,7 +12,6 @@
                 {% endif %}
 			</figure>
 		</li>
-		
 	{% endfor %}
 	{% endautoescape %}
 	</ul>

@@ -8,6 +8,8 @@ def read(fname):
 
 INSTALL_REQUIRES = [
     "django-admin-sortable==1.6.7",
+    "django-sekizai==0.7",
+    "easy-thumbnails==2.0.1",
 ]
 
 CLASSIFIERS = [
@@ -25,7 +27,7 @@ CLASSIFIERS = [
 
 setup(
     name = "djangocms-slideshow",
-    version = "0.1.3",
+    version = "0.1.4",
     author = "Urga",
     author_email = "dries@urga.be",
     description = "A simple django cms slideshow plugin",

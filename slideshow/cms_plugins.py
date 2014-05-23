@@ -10,7 +10,7 @@ from .admin import ImageAdminInline as Image
 class SlideShowPlugin(CMSPluginBase, SortableAdmin):
     model = SlideShowModel
     name = _('Slideshow')
-    render_template = 'slideshow.html'
+    render_template = 'slideshow/slideshow.html'
     inlines = [Image, ]
 
     def render(self, context, instance, placeholder):
