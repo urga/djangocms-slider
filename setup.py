@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import os
 from setuptools import setup
 
@@ -9,12 +10,12 @@ INSTALL_REQUIRES = [
 CLASSIFIERS = [
     "Development Status :: 5 - Production/Stable",
     "Natural Language :: Dutch",
-    "Natural Language :: English"
+    "Natural Language :: English",
     "Programming Language :: Python :: 2.7",
     "Framework :: Django",
     "Intended Audience :: Developers",
     "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
-    "Topic :: Multimedia :: Graphics :: Viewers"
+    "Topic :: Multimedia :: Graphics :: Viewers",
     "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
     "Operating System :: OS Independent",
 ]

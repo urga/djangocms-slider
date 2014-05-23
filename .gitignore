@@ -1,1 +1,11 @@
-.idea
+*.log
+*.pot
+*.pyc
+.project
+.pydevproject
+.settings
+.*
+djangocms_slideshow.egg-info
+dist
+build
+env*
