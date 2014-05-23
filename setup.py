@@ -30,14 +30,14 @@ def read(fname):
 
 setup(
     name = "djangocms-slideshow",
-    version = "0.1.1",
+    version = "0.1.2",
     author = "Urga",
     author_email = "dries@urga.be",
     description = "A simple django cms slideshow plugin",
     long_description=read('README.md'),
     license = "GNU",
     keywords = ["slideshow", "django", "cms", "plugin"],
-    url = "https://pypi.python.org/pypi/djangocms-slideshow/0.1.0",
+    url = "https://github.com/urga/djangocms-slideshow",
     packages=['slideshow', ],
     install_requires=INSTALL_REQUIRES,
     classifiers=CLASSIFIERS,
