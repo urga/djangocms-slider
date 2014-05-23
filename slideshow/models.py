@@ -7,7 +7,7 @@ from adminsortable.models import Sortable
 
 
 class Image(Sortable):
-    slideshow = models.ForeignKey('SlideShow', verbose_name=_('Slideshow'), related_name=_('images'))
+    slideshow = models.ForeignKey('SlideShow', verbose_name=_('Slideshow'), related_name='images')
     name = models.CharField(_('Name'), max_length=255)
     image = models.ImageField(_('Image'), upload_to='slideshow')
     url = models.CharField(_('Url'), max_length=255, blank=True, null=True)

@@ -27,7 +27,7 @@ CLASSIFIERS = [
 
 setup(
     name = "djangocms-slideshow",
-    version = "0.1.4",
+    version = "0.1.5",
     author = "Urga",
     author_email = "dries@urga.be",
     description = "A simple django cms slideshow plugin",
