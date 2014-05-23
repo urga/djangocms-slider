@@ -29,13 +29,13 @@ def read(fname):
 
 setup(
     name = "djangocms-slideshow",
-    version = "0.0.1",
+    version = "0.1.0",
     author = "Urga",
     author_email = "dries@urga.be",
     description = "A simple django cms slideshow plugin",
     long_description=read('README.txt'),
     license = "GNU",
-    keywords = "django cms slideshow plugin",
+    keywords = ["slideshow", "django", "cms", "plugin"],
     url = "",
     packages=['slideshow', ],
     install_requires=INSTALL_REQUIRES,
