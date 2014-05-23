@@ -30,7 +30,7 @@ def read(fname):
 
 setup(
     name = "djangocms-slideshow",
-    version = "0.1.0",
+    version = "0.1.1",
     author = "Urga",
     author_email = "dries@urga.be",
     description = "A simple django cms slideshow plugin",
