@@ -25,17 +25,17 @@ CLASSIFIERS = [
 
 setup(
     name = "djangocms-slideshow",
-    version = "0.1.2",
+    version = "0.1.3",
     author = "Urga",
     author_email = "dries@urga.be",
     description = "A simple django cms slideshow plugin",
     license = "GNU",
     keywords = ["slideshow", "django", "cms", "plugin"],
     url = "https://github.com/urga/djangocms-slideshow",
-    packages=['slideshow', ],
+    packages=['slideshow', 'slideshow.migrations', ],
     install_requires=INSTALL_REQUIRES,
     classifiers=CLASSIFIERS,
-    long_description=read('README.rst'),
+    long_description=read('README.md'),
     include_package_data=True,
     zip_safe=False
 )
