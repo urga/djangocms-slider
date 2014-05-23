@@ -3,6 +3,9 @@ import os
 from setuptools import setup
 
 
+def read(fname):
+    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+
 INSTALL_REQUIRES = [
     "django-admin-sortable==1.6.7",
 ]
@@ -20,27 +23,19 @@ CLASSIFIERS = [
     "Operating System :: OS Independent",
 ]
 
-
-# Utility function to read the README file.
-# Used for the long_description.  It's nice, because now 1) we have a top level
-# README file and 2) it's easier to type in the README file than to put a raw
-# string in below ...
-def read(fname):
-    return open(os.path.join(os.path.dirname(__file__), fname)).read()
-
 setup(
     name = "djangocms-slideshow",
     version = "0.1.2",
     author = "Urga",
     author_email = "dries@urga.be",
     description = "A simple django cms slideshow plugin",
-    long_description=read('README.md'),
     license = "GNU",
     keywords = ["slideshow", "django", "cms", "plugin"],
     url = "https://github.com/urga/djangocms-slideshow",
     packages=['slideshow', ],
     install_requires=INSTALL_REQUIRES,
     classifiers=CLASSIFIERS,
+    long_description=read('README.rst'),
     include_package_data=True,
     zip_safe=False
 )
