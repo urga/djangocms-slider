@@ -63,9 +63,9 @@ class SlideShowPluginTests(TestCase):
         """
         image_admin = ImageAdminInline(SlideShow, self.site)
         self.assertEqual(image_admin.get_fieldsets(self.request),
-                         [(None, {'fields': ['slideshow', 'name', 'image']})])
+                         [(None, {'fields': ['slideshow', 'name', 'image', 'url']})])
         self.assertEqual(image_admin.get_fieldsets(self.request, self.test_image),
-                         [(None, {'fields': ['slideshow', 'name', 'image']})])
+                         [(None, {'fields': ['slideshow', 'name', 'image', 'url']})])
 
     def test_admin_widget(self):
         """
