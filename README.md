@@ -18,6 +18,7 @@ To install:
 
 * run `pip install djangocms-slideshow` on your virtualenv
 * add `slideshow` to your `INSTALLED_APPS` setting
+* add `adminsortable` to your `INSTALLED_APPS` setting
 * Run `./manage.py migrate slideshow`
 
 Usage
