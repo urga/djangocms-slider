@@ -1,36 +1,40 @@
-{% load sekizai_tags thumbnail %}
+{% load sekizai_tags cms_tags %}
 <div class="flexslider headergallery">
 	<ul class="slides">
-	{% autoescape off %}
-	{% for image in instance.images.all %}
+   {% autoescape off %}
+   {% for plugin in instance.child_plugin_instances %}
+   {% render_plugin plugin %}
+        {% comment %}
 		<li>
 			<figure>
 				{% if image.url %}
+                {{ image }}
                     <a href="{{ image.url }}"><img src="{{ PUBLIC_URL }}{% thumbnail image.image 1170x500 upscale crop %}" alt="{{ image.name }}" /></a>
-                {% else %}
+
                     <img src="{{ PUBLIC_URL }}{% thumbnail image.image 1170x500 upscale crop %}" alt="{{ image.name }}" />
                 {% endif %}
 			</figure>
 		</li>
-	{% endfor %}
-	{% endautoescape %}
-	</ul>
+    {% endcomment %}
+    {% endfor %}
+    {% endautoescape %}
+  </ul>
 </div>
 
 {% addtoblock "css" %}
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.2/flexslider-min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.0/flexslider.min.css" />
 {% endaddtoblock %}
 
 {% addtoblock "js" %}
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.2/jquery.flexslider-min.js"></script>
 <script type="text/javascript">
-    $(document).ready(function() {
-        $('.flexslider').flexslider({
-            animation: "slide"
-            ,pauseOnAction: false
-            ,pauseOnHover: true
-            ,controlNav: false
-        });
+  $(document).ready(function() {
+    $('.flexslider').flexslider({
+      animation: "slide"
+      ,pauseOnAction: false
+      ,pauseOnHover: true
+      ,controlNav: false
     });
+  });
 </script>
 {% endaddtoblock %}

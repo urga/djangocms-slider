@@ -7,9 +7,8 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 INSTALL_REQUIRES = [
-    "django-admin-sortable==1.6.7",
-    "django-sekizai==0.7",
-    "easy-thumbnails==2.0.1",
+    "django-cms>3.0",
+    "sorl-thumbnail",
 ]
 
 CLASSIFIERS = [
@@ -26,14 +25,14 @@ CLASSIFIERS = [
 ]
 
 setup(
-    name = "djangocms-slideshow",
-    version = "0.1.5",
-    author = "Urga",
-    author_email = "dries@urga.be",
-    description = "A simple django cms slideshow plugin",
-    license = "GNU",
-    keywords = ["slideshow", "django", "cms", "plugin"],
-    url = "https://github.com/urga/djangocms-slideshow",
+    name="djangocms-slideshow",
+    version="0.2",
+    author="Urga Creatieve Communicatie",
+    author_email="dries@urga.be",
+    description="A simple django cms slideshow plugin",
+    license="GNU",
+    keywords=["slideshow", "django", "cms", "plugin"],
+    url="https://github.com/urga/djangocms-slideshow",
     packages=['slideshow', 'slideshow.migrations', ],
     install_requires=INSTALL_REQUIRES,
     classifiers=CLASSIFIERS,

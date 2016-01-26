@@ -1,0 +1,12 @@
+{% load thumbnail %}
+
+<li class="slideshow-slide">
+  {% thumbnail instance.image "1140x705" as thumb %}
+  <img src="{{ thumb.url }}" width="{{ thumb.width }}" height="{{ thumb.height }}" alt="{{ instance.alt }}"{% if instance.longdesc %} title="{{ instance.longdesc }}"{% endif %} />
+  {% endthumbnail %}
+  {% thumbnail instance.image "1140" crop="center" as thumb %}
+  <a href="{{ thumb.url }}" class="overlay-link popup-img">
+    <i class="fa fa-search"></i>
+  </a>
+  {% endthumbnail %}
+</li>
