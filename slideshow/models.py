@@ -17,17 +17,10 @@ except ImportError:
 
 
 @python_2_unicode_compatible
-class Slider(CMSPlugin):
+class Slide(CMSPlugin):
     """
-    A Picture with or without a link.
+    A Slide plugin that contains an image and some text.
     """
-    LEFT = "left"
-    RIGHT = "right"
-    CENTER = "center"
-    FLOAT_CHOICES = ((LEFT, _("left")),
-                     (RIGHT, _("right")),
-                     (CENTER, _("center")),
-                     )
 
     image = models.ImageField(_("image"), upload_to=get_plugin_media_path)
     url = models.CharField(
@@ -40,29 +33,13 @@ class Slider(CMSPlugin):
         help_text=_("If present, clicking on image will take user to "
                     "specified page."))
 
-    alt = models.CharField(
-        _("alternate text"), max_length=255, blank=True, null=True,
-        help_text=_("Specifies an alternate text for an image, if the image"
-                    "cannot be displayed.<br />Is also used by search engines"
-                    "to classify the image."))
-
-    longdesc = models.CharField(
-        _("long description"), max_length=255, blank=True, null=True,
-        help_text=_("When user hovers above picture, this text will appear "
-                    "in a popup."))
-
-    float = models.CharField(
-        _("side"), max_length=10, blank=True, null=True, choices=FLOAT_CHOICES,
-        help_text=_("Move image left, right or center."))
-
-    width = models.IntegerField(_("width"), blank=True, null=True,
-                                help_text=_("Pixel"))
-    height = models.IntegerField(_("height"), blank=True, null=True,
-                                 help_text=_("Pixel"))
+    caption = models.TextField(
+        _("caption"), max_length=255, blank=True, null=True,
+        help_text=_("Specifies text that occurs on the slide."))
 
     def __str__(self):
-        if self.alt:
-            return self.alt[:40]
+        if self.caption:
+            return self.caption[:40]
         elif self.image:
             # added if, because it raised attribute error when file wasn't
             # defined.
@@ -80,6 +57,9 @@ class Slider(CMSPlugin):
 
 @python_2_unicode_compatible
 class SlideShow(CMSPlugin):
+    """
+    Plugin that can only contain Slides.
+    """
 
     def __str__(self):
         return _(u"%s Images") % self.cmsplugin_set.all().count()

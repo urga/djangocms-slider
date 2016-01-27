@@ -3,13 +3,13 @@
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from django.utils.translation import ugettext_lazy as _
-from .models import SlideShow, Slider
+from .models import SlideShow, Slide
 
 
-class SlideShowSliderPlugin(CMSPluginBase):
-    model = Slider
+class SlideShowSlidePlugin(CMSPluginBase):
+    model = Slide
     module = _("Slideshow")
-    name = _("Slider")
+    name = _("Slide")
     render_template = 'slideshow/slide.html'
 
 
@@ -19,7 +19,7 @@ class SlideShowPlugin(CMSPluginBase):
     module = _("Slideshow")
     render_template = 'slideshow/slideshow.html'
     allow_children = True
-    child_classes = ["SlideShowSliderPlugin"]
+    child_classes = ["SlideShowSlidePlugin"]
 
     def render(self, context, instance, placeholder):
         context.update({
@@ -28,5 +28,5 @@ class SlideShowPlugin(CMSPluginBase):
         })
         return context
 
-plugin_pool.register_plugin(SlideShowSliderPlugin)
+plugin_pool.register_plugin(SlideShowSlidePlugin)
 plugin_pool.register_plugin(SlideShowPlugin)
