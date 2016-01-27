@@ -5,7 +5,7 @@ A simple django cms slideshow plugin.
 
 Features:
 
-* The images can be arranged.
+* There are 2 plugins: SlideShow and Slide. A SlideShow can only contains Slides. Those can be arranged in the order you want just like any other plugin.
 * Each image can have a url specified (creating an anchor around the image)
 * By default, creates a [flexslider](http://www.woothemes.com/flexslider/) slideshow.
 
@@ -18,7 +18,6 @@ To install:
 
 * run `pip install djangocms-slideshow` on your virtualenv
 * add `slideshow` to your `INSTALLED_APPS` setting
-* add `adminsortable` to your `INSTALLED_APPS` setting
 * Run `./manage.py migrate slideshow`
 
 Usage
