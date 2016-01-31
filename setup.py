@@ -1,40 +1,50 @@
 #!/usr/bin/env python
 import os
-from setuptools import setup
+import djangocms_slideshow
+
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
+
+version = djangocms_slideshow.__version__
 
 
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 INSTALL_REQUIRES = [
-    "django-admin-sortable==1.6.7",
-    "django-sekizai==0.7",
-    "easy-thumbnails==2.0.1",
+    "django>=1.8.0, <1.9",
+    "django-cms>=3.0",
+    "sorl-thumbnail",
 ]
 
 CLASSIFIERS = [
-    "Development Status :: 5 - Production/Stable",
-    "Natural Language :: Dutch",
-    "Natural Language :: English",
-    "Programming Language :: Python :: 2.7",
-    "Framework :: Django",
-    "Intended Audience :: Developers",
-    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
-    "Topic :: Multimedia :: Graphics :: Viewers",
-    "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
-    "Operating System :: OS Independent",
+    'Development Status :: 3 - Alpha',
+    'Framework :: Django',
+    'Framework :: Django :: 1.8',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: BSD License',
+    'Natural Language :: English',
+    'Natural Language :: Dutch',
+    'Programming Language :: Python :: 2',
+    'Programming Language :: Python :: 2.7',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.3',
+    'Programming Language :: Python :: 3.4',
+    'Programming Language :: Python :: 3.5',
 ]
 
 setup(
-    name = "djangocms-slideshow",
-    version = "0.1.5",
-    author = "Urga",
-    author_email = "dries@urga.be",
-    description = "A simple django cms slideshow plugin",
-    license = "GNU",
-    keywords = ["slideshow", "django", "cms", "plugin"],
-    url = "https://github.com/urga/djangocms-slideshow",
-    packages=['slideshow', 'slideshow.migrations', ],
+    name="djangocms-slideshow",
+    version=version,
+    author="Urga Creatieve Communicatie",
+    author_email="dries@urga.be",
+    description="A simple django cms slideshow plugin",
+    license="BSD",
+    keywords=["slideshow", "django", "cms", "plugin"],
+    url="https://github.com/urga/djangocms-slideshow",
+    packages=['djangocms_slideshow', ],
     install_requires=INSTALL_REQUIRES,
     classifiers=CLASSIFIERS,
     long_description=read('README.md'),

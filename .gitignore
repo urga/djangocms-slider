@@ -9,3 +9,4 @@ djangocms_slideshow.egg-info
 dist
 build
 env*
+*.sublime-*
