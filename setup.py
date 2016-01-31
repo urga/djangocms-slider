@@ -36,7 +36,7 @@ CLASSIFIERS = [
 ]
 
 setup(
-    name="djangocms-slideshow",
+    name="djangocms-slider",
     version=version,
     author="Urga Creatieve Communicatie",
     author_email="dries@urga.be",
