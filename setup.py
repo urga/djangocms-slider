@@ -40,7 +40,7 @@ setup(
     version=version,
     author="Urga Creatieve Communicatie",
     author_email="dries@urga.be",
-    description="A simple django cms slideshow plugin",
+    description="A slider plugin for djangocms that lets you arrange slides like any other djangocms plugin.",
     license="BSD",
     keywords=["slideshow", "django", "cms", "plugin"],
     url="https://github.com/urga/djangocms-slideshow",
