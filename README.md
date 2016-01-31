@@ -17,10 +17,10 @@ This plugin requires `django CMS 3.0` or higher to be properly installed and con
 To install:
 
 * run `pip install djangocms-slideshow` on your virtualenv
-* add `slideshow` to your `INSTALLED_APPS` setting
-* Run `./manage.py migrate slideshow`
+* add `djangocms_slideshow` to your `INSTALLED_APPS` setting (mind the underscore)
+* Run `./manage.py migrate djangocms_slideshow`
 
 Usage
 -----
 
-To use a custom template, just add `slideshow.html` in directory `templates/slideshow` of your Django project.
+To override the template, just add `slideshow.html` and or 'slide.html' in a django template directory under `templates/slideshow`.
