@@ -21,7 +21,7 @@ class SliderPlugin(CMSPluginBase):
     module = _("Slider")
     render_template = 'djangocms_slider/slider.html'
     allow_children = True
-    child_classes = ["SliderPlugin"]
+    child_classes = ["SlidePlugin"]
 
     def render(self, context, instance, placeholder):
         context.update({
