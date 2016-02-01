@@ -18,7 +18,7 @@ plugin_pool.register_plugin(SlidePlugin)
 class SliderPlugin(CMSPluginBase):
     model = Slider
     name = _('Slider')
-    module = _("Slideshow")
+    module = _("Slider")
     render_template = 'djangocms_slider/slider.html'
     allow_children = True
     child_classes = ["SliderPlugin"]
