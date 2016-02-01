@@ -19,11 +19,14 @@ try:
             "django.contrib.sites",
             'treebeard',
             'cms',
-            "djangocms_slideshow",
+            'sekizai',
+            "djangocms_slider",
         ],
         SITE_ID=1,
         MIDDLEWARE_CLASSES=(),
         TEMPLATE_CONTEXT_PROCESSORS=('django.core.context_processors.request',),
+        LANGUAGE_CODE='en',
+        LANGUAGES=(('en', 'English'),),
         TEMPLATES=[
             {
                 'BACKEND': 'django.template.backends.django.DjangoTemplates',

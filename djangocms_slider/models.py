@@ -56,7 +56,7 @@ class Slide(CMSPlugin):
 
 
 @python_2_unicode_compatible
-class SlideShow(CMSPlugin):
+class Slider(CMSPlugin):
     """
     Plugin that can only contain Slides.
     """
