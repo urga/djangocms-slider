@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 import os
-import djangocms_slideshow
+import djangocms_slider
 
 try:
     from setuptools import setup
 except ImportError:
     from distutils.core import setup
 
-version = djangocms_slideshow.__version__
+version = djangocms_slider.__version__
 
 
 def read(fname):
@@ -44,7 +44,7 @@ setup(
     license="BSD",
     keywords=["slideshow", "django", "cms", "plugin"],
     url="https://github.com/urga/djangocms-slideshow",
-    packages=['djangocms_slideshow', ],
+    packages=['djangocms_slider', ],
     install_requires=INSTALL_REQUIRES,
     classifiers=CLASSIFIERS,
     long_description=read('README.md'),

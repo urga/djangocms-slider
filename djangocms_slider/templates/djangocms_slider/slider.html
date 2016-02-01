@@ -1,5 +1,5 @@
 {% load sekizai_tags cms_tags %}
-<div class="flexslider headergallery">
+<div class="slider">
 	<ul class="slides">
    {% autoescape off %}
    {% for plugin in instance.child_plugin_instances %}
@@ -29,7 +29,7 @@
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.2/jquery.flexslider-min.js"></script>
 <script type="text/javascript">
   $(document).ready(function() {
-    $('.flexslider').flexslider({
+    $('.slider').flexslider({
       animation: "slide"
       ,pauseOnAction: false
       ,pauseOnHover: true
