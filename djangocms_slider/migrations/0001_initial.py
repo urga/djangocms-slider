@@ -8,7 +8,6 @@ import cms.models.pluginmodel
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('cms', '__latest__'),
     ]
 
     operations = [
